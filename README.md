@@ -12,7 +12,6 @@ of final adoption, PG conformance or successful native/provider integration.
 - [Examples](examples/README.md): synthetic `shared/` and `entries/` fixture, including keyless,
   unprefixed and default-backend agents; the checker runs offline without PG or credentials.
 - [AI contribution policy](AIPOLICY.md).
-- `sample/`: protected historical input, not a current-profile baseline or migration source.
 
 The language baseline is yapyon 0.6.5 at the immutable revision linked in the specification.
 Model IDs, providers and native harness formats are not defined by this store format. Reading a
