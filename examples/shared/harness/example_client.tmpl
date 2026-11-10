@@ -1,0 +1,19 @@
+harness:
+  name: "example_client"
+  desc: "Synthetic harness; not an executable integration"
+  path: y"{runtime.agent_path}/harness"
+  auth_var: "EXAMPLE_API_KEY"
+  path_var: "EXAMPLE_CONFIG_HOME"
+  wrapper_env: {}
+  config_file: "settings.json"
+  config_store:
+    api_base: y"{persona.mind.dialects[protocol].api_uri}"
+    model: (persona.mind.model_active)
+    optional: None
+    retries: 0
+    enabled: False
+    labels: []
+    extra: {}
+  content: y"{config_store.__as_json__()}"
+  supported_dialects: ["responses", "chat"]
+  protocol: [dialect for dialect in supported_dialects if persona.mind.dialects.__get__(dialect) is not None][0]

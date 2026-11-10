@@ -1,0 +1,12 @@
+persona:
+  name: "local"
+  desc: "Synthetic local persona"
+  mind:
+    endpoint: y"{$AGENT_STORE_EXAMPLE_ENDPOINT}"
+    context_size: None
+    model_list: ["example-model"]
+    model_active: model_list.__get__(0)
+    model_subagent: (model_active)
+    dialects:
+      chat<dialect.chat>: {}
+      responses: None

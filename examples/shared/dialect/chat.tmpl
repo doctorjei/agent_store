@@ -1,0 +1,11 @@
+dialect:
+  name: "chat"
+  api_uri: y"{endpoint}"
+  msg_uri: y"{api_uri}/v1/chat/completions"
+  model_uri: y"{api_uri}/v1/models"
+  emb_uri: y"{api_uri}/v1/embeddings"
+  verify:
+    check_uri: y"{msg_uri}"
+    key_header: "Authorization: Bearer"
+    headers: []
+    body: ""
